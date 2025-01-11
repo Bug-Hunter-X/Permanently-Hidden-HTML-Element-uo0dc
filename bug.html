@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById("myDiv").style.display = "none";
+      // Bug: Missing code to re-display the div. This creates a situation where the div is hidden permanently, and no further interaction to make it visible is provided.
+    }
+  </script>
+</body>
+</html>
